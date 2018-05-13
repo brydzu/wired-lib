@@ -1,4 +1,4 @@
-# \<wired-lib\>
+# wired-lib
 
 This is the core rendering library used by all wired ui components
 
