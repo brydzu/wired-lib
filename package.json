@@ -1,5 +1,5 @@
 {
-  "name": "@wired/wired-lib",
+  "name": "wired-lib",
   "version": "0.5.0",
   "description": "Core sketchy rendering lib used by wired components",
   "main": "wired-lib.js",
