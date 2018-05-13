@@ -1,14 +1,14 @@
-var __maxRandomnessOffset = 2;
-var __roughness = 1;
-var __bowing = 1;
-var __curveTightness = 0;
-var __curveStepCount = 9;
+const __maxRandomnessOffset = 2;
+const __roughness = 1;
+const __bowing = 1;
+const __curveTightness = 0;
+const __curveStepCount = 9;
 
 class Wires {
   _svgNode(tagName, attributes) {
-    var n = document.createElementNS("http://www.w3.org/2000/svg", tagName);
+    const n = document.createElementNS("http://www.w3.org/2000/svg", tagName);
     if (attributes) {
-      for (var p in attributes) {
+      for (const p in attributes) {
         if (attributes.hasOwnProperty(p)) {
           n.setAttributeNS(null, p, attributes[p]);
         }
@@ -117,7 +117,7 @@ class Wires {
     const halfOffset = offset / 2;
     const divergePoint = 0.2 + Math.random() * 0.2;
     let midDispX = __bowing * __maxRandomnessOffset * (y2 - y1) / 200;
-    let midDispY = __bowing * __maxRandomnessOffset * (x1, x2) / 200;
+    let midDispY = __bowing * __maxRandomnessOffset * (x1 - x2) / 200;
     midDispX = this._getOffset(-midDispX, midDispX);
     midDispY = this._getOffset(-midDispY, midDispY);
 
@@ -222,6 +222,4 @@ class WiresPath {
   }
 }
 
-if (!window._WIRES_) {
-  window._WIRES_ = new Wires();
-}
+export const wired = new Wires();
