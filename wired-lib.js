@@ -1,6 +1,6 @@
 const __maxRandomnessOffset = 2;
 const __roughness = 1;
-const __bowing = 1;
+const __bowing = 0.85;
 const __curveTightness = 0;
 const __curveStepCount = 9;
 
